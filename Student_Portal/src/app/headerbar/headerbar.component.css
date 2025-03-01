@@ -1,0 +1,42 @@
+.container{
+ display: flex;
+ justify-content: space-between;
+    align-items: center;
+    background-color: #97c4e4;
+    padding: 10px 0;
+    color: black;
+    height: 48px;
+}
+.container-body{
+    display: contents;
+    height: 100vh;
+}
+.example-container {
+    display: contents;
+    height: 100vh;
+}
+.example-icon{
+    overflow: hidden;
+}
+.message{
+    float: right;
+    margin-right: 26px;
+}
+.search{
+    height: 25px;
+    border-radius: 8px;
+    border: thick;
+    margin-left: 100px;
+}
+.navList{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+.mat-drawer-container{
+  overflow: hidden;
+}
+ .align-center {
+    display: flex;
+    align-items: center;
+ }

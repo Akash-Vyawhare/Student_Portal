@@ -1,9 +1,8 @@
-.container{
+.container1{
  display: flex;
  justify-content: space-between;
     align-items: center;
     background-color: #97c4e4;
-    padding: 10px 0;
     color: black;
     height: 48px;
 }

@@ -1,0 +1,14 @@
+.addPost{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.addPost_btn{
+    height: 42px;
+    width: 100px;
+    background-color: #1ecac7;
+    top: 20px;
+    font-size: 16px;
+    margin: auto;
+}

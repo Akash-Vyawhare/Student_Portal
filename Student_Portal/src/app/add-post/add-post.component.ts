@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-add-post',
@@ -6,10 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./add-post.component.css']
 })
 export class AddPostComponent {
+
   constructor() { };
-  title = '';
-  content = '';
+  post={
+    title:'',
+    content:''
+  };
+  
   addPost() {
-    console.log(this.title, this.content);
+    console.log(this.post.title, this.post.content);
+  }
+  onSubmit(form:NgForm) {
+    if (form.invalid) {
+      console.log('Invalid Form');
+      return;
+    }
+    console.log(this.post.title, this.post.content);
   }
 }

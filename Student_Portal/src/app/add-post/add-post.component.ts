@@ -11,17 +11,31 @@ export class AddPostComponent {
   constructor() { };
   post={
     title:'',
-    content:''
+    content:'',
+    firstName:'',
+    lastName:'',
+    email:'',
+    contactNumber:'',
+    address:'',
+    city:'',
+    state:'',
+    zip:'',
+    country:'',
+    password:'',
+    confirmPassword:'',
+    terms:'',
+    
+
   };
   
   addPost() {
-    console.log(this.post.title, this.post.content);
+    console.log(this.post, this.post);
   }
   onSubmit(form:NgForm) {
     if (form.invalid) {
       console.log('Invalid Form');
       return;
     }
-    console.log(this.post.title, this.post.content);
+    console.log(this.post, this.post);
   }
 }

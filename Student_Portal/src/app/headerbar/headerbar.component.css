@@ -5,6 +5,8 @@
     background-color: #97c4e4;
     color: black;
     height: 48px;
+    position: sticky;
+    top: 0;
 }
 .container-body{
     display: contents;

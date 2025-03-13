@@ -1,21 +1,63 @@
-<form class="col-md-6 offset-md-3" #form="ngForm" (ngSubmit)="onSubmit(form)">
-    <h2>Add Post</h2>
-    <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" id="title" name="title" [(ngModel)]="post.title" placeholder="Title" required minlength="5" #title="ngModel">
-        <div>
-            <small *ngIf="form.submitted && !title.valid && title.touched" class="text-danger">Title is required! </small>
-            <small *ngIf="form.submitted && title.errors?.['minlength']" class="text-danger">Title should be at least 5 characters</small>
+<div class="col-md-6 offset-md-4" >
+<h2 style="height: 10px;">Template Driven Form</h2>
+</div>
+<div  class="col-md-6 offset-md-3">
+    <form class="templateForm" #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+        <h2 >Template Driven Form</h2>
+        <div class="form-group" class="form_field">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="post.title" placeholder="Title" required minlength="5" #title="ngModel">
+            <div>
+                <small *ngIf="form.submitted && !title.valid && title.touched" class="text-danger">Title is required! </small>
+                <small *ngIf="form.submitted && title.errors?.['minlength']" class="text-danger">Title should be at least 5 characters</small>
+            </div>
         </div>
-    </div>
-     
-    <div class="form-group">
-        <label for="content">Content</label>
-        <textarea class="form-control" id="content" name="content" [(ngModel)]="post.content" placeholder="write Something......." required minlength="20" #content="ngModel"></textarea>
-        <div>
-            <small *ngIf="form.submitted && !content.valid && content.touched" class="text-danger">Content is required!</small>
-            <small *ngIf="form.submitted && content.errors?.['minlength']" class="text-danger"> Content should be at least 20 characters</small>
+          
+        <div class="form-group" class="form_field">
+            <label for="content">Content</label>
+            <textarea class="form-control" id="content" name="content" [(ngModel)]="post.content" placeholder="write Something......." required minlength="20" #content="ngModel"></textarea>
+            <div>
+                <small *ngIf="form.submitted && !content.valid && content.touched" class="text-danger">Content is required!</small>
+                <small *ngIf="form.submitted && content.errors?.['minlength']" class="text-danger"> Content should be at least 20 characters</small>
+            </div>
         </div>
-    </div>
-    <button type="submit" class="btn btn-primary" (click)="addPost()">Submit</button>
-</form>
+        <div class="form-group" class="form_field">
+            <label for="firstName">First Name</label>
+            <input class="form-control" id="firstName" name="firstName" [(ngModel)]="post.firstName" placeholder="Enter Your First Name......." required minlength="5" #firstName="ngModel" />
+            <div>
+                <small *ngIf="form.submitted && !firstName.valid && firstName.touched" class="text-danger">First name is required!</small>
+                <small *ngIf="form.submitted && firstName.errors?.['minlength']" class="text-danger"> First name  should be greter than 5 characters</small>
+            </div>
+        </div>
+        <div class="form-group" class="form_field">
+            <label for="lastName">Last Name</label>
+            <input class="form-control" id="lastName" name="lastName" [(ngModel)]="post.lastName" placeholder="Enter Your Last Name......." required minlength="5" #lastName="ngModel" />
+            <div>
+                <small *ngIf="form.submitted && !lastName.valid && lastName.touched" class="text-danger">Last name is required!</small>
+                <small *ngIf="form.submitted && lastName.errors?.['minlength']" class="text-danger"> Last name  should be greter than 5 characters</small>
+            </div>
+        </div>
+        <div class="form-group" class="form_field">
+            <label for="email">Email</label>
+            <input class="form-control" id="email" name="email" [(ngModel)]="post.email" placeholder="Enter Your Email......." required email #email="ngModel" />
+            <div>
+                <small *ngIf="form.submitted && !email.valid && email.touched" class="text-danger">Email is required!</small>
+                <small *ngIf="form.submitted && email.errors?.['email']" class="text-danger"> Email should be valid</small>
+            </div>
+        </div>
+        <div class="form-group" class="form_field">
+            <label for="contactNumber">Contact Number</label>
+            <input class="form-control" id="contactNumber" name="contactNumber" [(ngModel)]="post.contactNumber" placeholder="Enter Your Email......." required email #contactNumber="ngModel" />
+            <div>
+                <small *ngIf="form.submitted && !contactNumber.valid && contactNumber.touched" class="text-danger">Contact Number is required!</small>
+                <small *ngIf="form.submitted && contactNumber.errors?.['minlength']" class="text-danger"> Contact Number   should be greter than 10 digit</small>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+        <button type="submit" class="btn btn-primary" class="form_field" (click)="addPost()">Submit</button>
+    </form>
+</div>

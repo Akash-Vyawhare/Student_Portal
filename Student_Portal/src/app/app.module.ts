@@ -13,6 +13,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { AddPostComponent } from './add-post/add-post.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
+import { AddPostReactiveComponent } from './add-post-reactive/add-post-reactive.component';
+import { MatModule } from './mat.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderbarComponent,
     AddPostComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AddPostReactiveComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { FooterComponent } from './footer/footer.component';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-
+    MatModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

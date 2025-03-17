@@ -21,8 +21,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatDialogModule
   ],
   imports: [
-    CommonModule,
-    BrowserModule,
+    // BrowserModule,
     MatFormFieldModule,
     MatButtonModule,
     ReactiveFormsModule,

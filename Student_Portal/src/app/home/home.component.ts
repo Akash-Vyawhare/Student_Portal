@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { AddPostReactiveComponent } from '../add-post-reactive/add-post-reactive.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,14 +9,20 @@ import { AddPostReactiveComponent } from '../add-post-reactive/add-post-reactive
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private dialog:MatDialog) { }
+  constructor(private dialog:MatDialog,
+    private router:Router,
+  ) { }
 
   addPostR() {
     console.log("Add Post Reactive");
+   // this.router.navigate(['/auth']);
     this.dialog.open(AddPostReactiveComponent, {
-      width: '500px',
-      height: '500px'
-    });
+      width: "550px",
+      
+      panelClass: 'custom-dialog-addpost-container'
+    }); 
+   
+    
   }
 
 }

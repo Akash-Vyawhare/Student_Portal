@@ -24,3 +24,12 @@
     columns: #000;
     margin-top: 10px;
 }
+.container{
+    height: 100%;
+    overflow: hidden;
+    background-color:#97c4e4;
+}
+.text-danger{
+    color: red;
+    font-weight: bold;
+}

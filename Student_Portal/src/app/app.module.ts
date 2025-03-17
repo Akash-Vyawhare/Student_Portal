@@ -15,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { AddPostReactiveComponent } from './add-post-reactive/add-post-reactive.component';
 import { MatModule } from './mat.module';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -23,10 +25,11 @@ import { MatModule } from './mat.module';
     AddPostComponent,
     HomeComponent,
     FooterComponent,
-    AddPostReactiveComponent
+    
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSidenavModule,
@@ -36,6 +39,7 @@ import { MatModule } from './mat.module';
     FormsModule,
     ReactiveFormsModule,
     MatModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

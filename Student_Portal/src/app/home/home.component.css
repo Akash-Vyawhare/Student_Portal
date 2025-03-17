@@ -7,8 +7,12 @@
 .addPost_btn{
     height: 42px;
     width: 20%;
-    background-color: #1ecac7;
+    background-color: #97c4e4;
     top: 20px;
     font-size: 16px;
     margin: auto;
 }
+.custom-dialog-addpost-container.mdc-dialog__surface{
+    overflow: hidden !important;
+}
+

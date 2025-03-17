@@ -1,0 +1,57 @@
+<div class="login-form login-container" >
+    <div class="container__background">
+        <div class="icon__container">
+            <h2 class="std_portal_name">STUDENT PORTAL</h2>
+            <p> Welcome to Student Portal</p>
+        </div>
+        <div class="separator"></div>
+        <div class="container login-box">
+            <div class="icon">
+                
+                <img src="assets/user-icon.png" alt="User Icon" />
+              </div>
+    
+            <form class="loginForm" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+                <h2 class="logintitle">User Login Portal</h2>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" formControlName="email" aria-describedby="emailHelp"
+                        placeholder="Enter email">
+                        <div *ngIf=" loginForm.controls['email']?.invalid && loginForm.controls['email']?.touched">
+                            <small style="color: red">Email is required</small>
+                        </div>
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small> -->
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" formControlName="password"
+                        placeholder="Password">
+                        <div *ngIf="loginForm.controls['password']?.invalid && loginForm.controls['password']?.touched">
+                            <small style="color: red">Password is required</small>
+
+                        </div>
+                </div>
+                <div class="options">
+    
+                    <label>
+                        <input type="checkbox" formControlName="rememberMe" name="rememberMe"> Remember Me
+                    </label>
+                    <a style="margin-left: 50px;" href="#">Forgot Password?</a>
+                    <div *ngIf="loginForm.controls['rememberMe']?.invalid && loginForm.controls['rememberMe']?.touched">
+                        <small style="color: red">You must accept the terms</small>
+                      </div>
+                </div>
+    
+                <div class="form-group" >
+                    <button type="submit" class="login-btn" style="margin-top: 10px;">LOGIN</button>
+                </div>
+                
+                   <p *ngIf="errorMessage" style="color: red">{{ errorMessage }}</p>
+    
+            </form>
+        </div>
+    </div>
+    
+
+</div>

@@ -41,3 +41,12 @@
     display: flex;
     align-items: center;
  }
+ .sidenavbar {
+    position: fixed;
+    width: 250px;  /* Adjust width as needed */
+    height: 100vh;
+    z-index: 1000;  /* Ensures it stays above other elements */
+    background-color: white;
+    overflow-y: auto;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  }

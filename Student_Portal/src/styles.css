@@ -6,3 +6,6 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
     height: 0px;
  }
+ .custom-dialog-addpost-container.mdc-dialog__surface{
+    overflow: hidden !important;
+}

@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { map, Observable } from 'rxjs';
-import { DialogComponent } from '../add-post-reactive/dialog.component';
+import { DialogComponent } from '../common/dialog.component';
 
 @Injectable({
   providedIn: 'root'

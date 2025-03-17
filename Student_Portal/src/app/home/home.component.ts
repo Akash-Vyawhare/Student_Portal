@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AddPostReactiveComponent } from '../add-post-reactive/add-post-reactive.component';
+import {  SignUpComponent } from '../auth/signUp/signUp.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,9 +14,8 @@ export class HomeComponent {
   ) { }
 
   addPostR() {
-    console.log("Add Post Reactive");
    // this.router.navigate(['/auth']);
-    this.dialog.open(AddPostReactiveComponent, {
+    this.dialog.open(SignUpComponent, {
       width: "550px",
       
       panelClass: 'custom-dialog-addpost-container'

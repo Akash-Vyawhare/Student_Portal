@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
-import { UserloginService } from '../services/userlogin.service';
+import { UserloginService } from '../../services/userlogin.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-add-post-reactive',
-  templateUrl: './add-post-reactive.component.html',
-  styleUrls: ['./add-post-reactive.component.css']
+  selector: 'app-signUp',
+  templateUrl: './signUp.component.html',
+  styleUrls: ['./signUp.component.css']
 })
-export class AddPostReactiveComponent implements OnInit {
+export class SignUpComponent implements OnInit {
 
   reactiveForm: FormGroup;
   userId:any="new";

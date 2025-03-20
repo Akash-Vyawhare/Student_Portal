@@ -27,7 +27,7 @@
     height: 25px;
     border-radius: 8px;
     border: thick;
-    margin-left: 100px;
+    margin-left: 255px;
 }
 .navList{
     display: flex;
@@ -49,4 +49,7 @@
     background-color: white;
     overflow-y: auto;
     box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  }
+  .userName{
+    margin-right: -200px;
   }

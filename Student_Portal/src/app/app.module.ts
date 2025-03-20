@@ -17,6 +17,8 @@ import { SignUpComponent } from './auth/signUp/signUp.component';
 import { MatModule } from './mat.module';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { SideNavListComponent } from './layout/side-nav-list/side-nav-list.component';
+import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddPostComponent,
     HomeComponent,
     FooterComponent,
+    SideNavListComponent,
+    LayoutComponent
     
   ],
   imports: [

@@ -1,0 +1,51 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav class="sidenavbar" mode="over" [(opened)]="isOpened" >
+        <mat-nav-list class="navList">
+            <mat-list-item>
+                <mat-icon matListIcon>account_circle</mat-icon>
+                <a matLine routerLink="/my-account">My Account</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>description</mat-icon>
+                <a matLine routerLink="/update-cv">Update CV</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>timeline</mat-icon>
+                <a matLine routerLink="/activity">Activity</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>group</mat-icon>
+                <a matLine routerLink="/friends">Friends</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>people</mat-icon>
+                <a matLine routerLink="/following">Following</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>work</mat-icon>
+                <a matLine routerLink="/applied-job-status">Applied Job Status</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>search</mat-icon>
+                <a matLine routerLink="/search-recruiter-post">Search Recruiter Post</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>settings</mat-icon>
+                <a matLine routerLink="/settings">Settings</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>policy</mat-icon>
+                <a matLine routerLink="/privacy-policy">Privacy Policy</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>gavel</mat-icon>
+                <a matLine routerLink="/terms-and-conditions">Terms and Conditions</a>
+            </mat-list-item>
+            <mat-list-item>
+                <mat-icon matListIcon>exit_to_app</mat-icon>
+                <a matLine (click)="logout()">Logout</a>
+            </mat-list-item>
+        </mat-nav-list>
+
+    </mat-sidenav>
+</mat-sidenav-container>

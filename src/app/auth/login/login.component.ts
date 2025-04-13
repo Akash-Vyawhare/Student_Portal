@@ -28,7 +28,7 @@ onLogin(){
   this.loginService.login(email, password).subscribe((success) => {
     if (success) {
       
-      this.router.navigate(['/application']); // Navigate to Dashboard
+      this.router.navigate(['/layout']); // Navigate to Dashboard
     } else {
       this.errorMessage = 'Invalid email or password';
     }

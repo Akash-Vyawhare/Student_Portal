@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm, FormGroup, FormControl, Validators } from '@angular/forms';
 import { UserloginService } from '../../services/userlogin.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-signUp',
@@ -14,7 +14,7 @@ export class SignUpComponent implements OnInit {
   userId:any="new";
   user:any;
 
-  constructor(private userloginService: UserloginService, private routes:ActivatedRoute) {
+  constructor(private userloginService: UserloginService, private routes:ActivatedRoute, private router:Router) {
 
     this.reactiveForm = new FormGroup({
       name: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -51,6 +51,8 @@ export class SignUpComponent implements OnInit {
     }else{
     this.userloginService.addUser(this.reactiveForm.value)
     console.log(this.reactiveForm.value);
+    
+    this.router.navigate(['/login']); // Navigate to Dashboard
 
 
   }

@@ -10,7 +10,7 @@ import { UserlistComponent } from './userlist/userlist.component';
 const routes: Routes = [
   {path: 'login', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)},
   
-  {path: 'application', component: LayoutComponent},
+  {path: 'layout', component: LayoutComponent},
   {path:'userSignUp', component:SignUpComponent},
   { path: 'home', component: HomeComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },

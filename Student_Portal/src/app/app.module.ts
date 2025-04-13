@@ -35,8 +35,8 @@ ModuleRegistry.registerModules([AllCommunityModule]);
     SideNavListComponent,
     LayoutComponent,
     UserlistComponent,
-    
-        
+
+
   ],
 
   imports: [
@@ -46,7 +46,7 @@ ModuleRegistry.registerModules([AllCommunityModule]);
     BrowserAnimationsModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule, 
+    MatListModule,
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
@@ -54,8 +54,8 @@ ModuleRegistry.registerModules([AllCommunityModule]);
     AgGridModule,
     HttpClientModule,
   ],
-  providers: [ 
-    {provide:LocationStrategy,useClass:HashLocationStrategy}
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })

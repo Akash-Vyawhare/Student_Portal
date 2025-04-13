@@ -1,0 +1,23 @@
+<div class="container1">
+ <div class="container-body">
+    
+    <button mat-icon-button class="example-icon" aria-label="example icon-button with menu icon" (click)="toggleSidenav()">
+        <mat-icon>menu</mat-icon>
+
+    </button>
+ </div>
+ <div class="align-center" appearance="fill">
+    <input class="search" placeholder="Search"  [formControl]="searchControl" >
+    <button mat-icon-button matSuffix  class="search-button">
+        <mat-icon>search</mat-icon>
+    </button>
+ </div>
+ <div class="userName">{{userName}}</div>
+ <div class="align-center">
+    <button mat-icon-button class="example-icon" aria-label="example icon-button with menu icon">
+        <mat-icon>message</mat-icon>
+    </button>
+    <span style="margin-right: 20px;">Chat</span>
+ </div>
+ 
+</div>

@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { SignUpComponent } from './auth/signUp/signUp.component';
 import { MatModule } from './mat.module';
-import { CommonModule } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SideNavListComponent } from './layout/side-nav-list/side-nav-list.component';
 import { LayoutComponent } from './layout/layout.component';
@@ -54,7 +54,9 @@ ModuleRegistry.registerModules([AllCommunityModule]);
     AgGridModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [ 
+    {provide:LocationStrategy,useClass:HashLocationStrategy}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

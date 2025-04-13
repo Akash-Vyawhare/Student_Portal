@@ -19,6 +19,11 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { SideNavListComponent } from './layout/side-nav-list/side-nav-list.component';
 import { LayoutComponent } from './layout/layout.component';
+import { UserlistComponent } from './userlist/userlist.component';
+import { AgGridAngular, AgGridModule } from 'ag-grid-angular';
+import { ModuleRegistry, AllCommunityModule } from 'ag-grid-community';
+
+ModuleRegistry.registerModules([AllCommunityModule]);
 
 @NgModule({
   declarations: [
@@ -28,9 +33,12 @@ import { LayoutComponent } from './layout/layout.component';
     HomeComponent,
     FooterComponent,
     SideNavListComponent,
-    LayoutComponent
+    LayoutComponent,
+    UserlistComponent,
     
+        
   ],
+
   imports: [
     BrowserModule,
     CommonModule,
@@ -43,7 +51,8 @@ import { LayoutComponent } from './layout/layout.component';
     FormsModule,
     ReactiveFormsModule,
     MatModule,
-    HttpClientModule
+    AgGridModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

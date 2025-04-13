@@ -26,6 +26,13 @@ this.dialog.open(DialogComponent,{
 });
 
 }
+getAllUserList(){
+  return this.http.get(this.userapi).pipe(
+    map((response:any) => {
+      return response;
+   
+ }));
+}
 getUser(userId:any){
   return this.http.get(`${this.userapi}/${userId}`)
 

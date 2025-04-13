@@ -25,6 +25,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ag-grid-community/styles/ag-grid.css",
+              
               "src/custom-theme.scss",
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
